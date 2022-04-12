@@ -4,7 +4,7 @@ import { StyleSheet, Text} from 'react-native';
 
 const Header = () => {
   return (
-      <LinearGradient style={styles.header} colors={['#F12711','#F5AF19']} start={{x:0,y:1}} end={{x:1,y:0}}>
+      <LinearGradient style={styles.header} colors={['#F5AF19','#F12711']} start={{x:0,y:1}} end={{x:1,y:0}}>
       <Text style={styles.titleHeader}>LOREM IPSUM</Text>
       </LinearGradient>
   )

@@ -6,7 +6,9 @@ const Content = () => {
     const [n1, setN1] = useState(null);
     const [n2, setN2] = useState(null);
     const [n3, setN3] = useState(null);
-    const [num, setNum] = useState('');
+    const [num, setNum] = useState(null);
+    const [num2, setNum2] = useState(null);
+    const [num3, setNum3] = useState(null);
     const [media, setMedia] = useState(0);
 
     function calcMedia(){
@@ -19,11 +21,35 @@ const Content = () => {
         }
     function calcIntervalo(){
         if(parseFloat(num) > 0 && parseFloat(num) <= 10){
-            alert('O numero está entre 1 e 10.')
+            alert('O número está entre 1 e 10.')
         }else if(parseFloat(num) > 10 && parseFloat(num) <= 20){
-            alert('O numero está entre 10 e 20.')
+            alert('O número está entre 10 e 20.')
         }else if(parseFloat(num) > 20 && parseFloat(num) <= 30){
-            alert('O numero está entre 10 e 20.')
+            alert('O número está entre 20 e 30.')
+        }else{
+            alert('O número é maior que 30')
+        }
+    }
+    function calcIntervalo2(){
+        if(parseFloat(num2) > 0 && parseFloat(num2) <= 10){
+            alert('O número está entre 1 e 10.')
+        }else if(parseFloat(num2) > 10 && parseFloat(num2) <= 20){
+            alert('O número está entre 10 e 20.')
+        }else if(parseFloat(num2) > 20 && parseFloat(num2) <= 30){
+            alert('O número está entre 20 e 30.')
+        }else{
+            alert('O número é maior que 30')
+        }
+    }
+    function calcIntervalo3(){
+        if(parseFloat(num3) > 0 && parseFloat(num3) <= 10){
+            alert('O número está entre 1 e 10.')
+        }else if(parseFloat(num3) > 10 && parseFloat(num3) <= 20){
+            alert('O número está entre 10 e 20.')
+        }else if(parseFloat(num3) > 20 && parseFloat(num3) <= 30){
+            alert('O número está entre 20 e 30.')
+        }else{
+            alert('O número é maior que 30')
         }
     }
     return(
@@ -91,14 +117,14 @@ const Content = () => {
                 style={styles.input}
                 placeholder="Digite um número"
                 keyboardType="numeric"
-                onChangeText={(num) => setNum(num)}
-                value={num}
+                onChangeText={(num2) => setNum2(num2)}
+                value={num2}
                 />  
                 <Button 
                 style={styles.btn}
                 title="Calcular"
                 color= "#FF8E00"
-                onPress={calcIntervalo}
+                onPress={calcIntervalo2}
                 />  
 
                 <Text>Número 3</Text>
@@ -106,14 +132,14 @@ const Content = () => {
                 style={styles.input}
                 placeholder="Digite um número"
                 keyboardType="numeric"
-                onChangeText={(num) => setNum(num)}
-                value={num}
+                onChangeText={(num3) => setNum3(num3)}
+                value={num3}
                 />
                 <Button 
                 style={styles.btn}
                 title="Calcular"
                 color= "#FF8E00"
-                onPress={calcIntervalo}
+                onPress={calcIntervalo3}
                 />  
             </View>
         </ScrollView>
